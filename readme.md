@@ -2,6 +2,9 @@
 Our objective is to create a IK solver and a path planning software for a 5DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.
 
 
+## Agile Iterative Process
+https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing
+
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/Sameep2808/Manipulator_arm_path_planner
