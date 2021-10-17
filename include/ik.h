@@ -4,7 +4,7 @@
 
 class Ik_solver{
 private:
-	double length[4];
+	double length[3];
 	double angle[4];
 	double x_initial=1,y_initial=1,z_initial=1;
 public:
