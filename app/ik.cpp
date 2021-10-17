@@ -1,5 +1,7 @@
 #include <ik.h>
 #include <iostream>
+#include <cmath>
+
 
 void Ik_solver::input_end_point(double x,double y,double z) {
 	x_final=x;
@@ -8,9 +10,11 @@ void Ik_solver::input_end_point(double x,double y,double z) {
 }
 
 void Ik_solver::ik_solve() {
-	angle[0]=
-
-
+	angle[0]=atan(z_final/x_final);
+	double x2=x_final-(length[2]*cos(90));
+	double y2=y_final-(length[2]*sin(90));
+	angle[2]=acos(((x2*x2)+(y2*y2)-(length[0]*length[0])-(length[1]*length[1]))/(2*length[1]*length[0]));
+	angle[1]=acos((((length[0]+length[1]*cos(angle[1]))*x2)+(length[1]*y2*sin(angle[1])))/((x2*x2)+(y2*y2)));
 }
 
 void Ik_solver::set_initial(){
