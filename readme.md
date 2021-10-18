@@ -56,7 +56,8 @@ Mechanical failures may result in unexpected behaviour of the arm and such failu
 
 ## Development Process
 The design and development process will be followed by the AIP (Agile Iterative process) model. Here programmers Yash and Sameep will write the initial code using TDD (Test driven development) format where Sameep will be the driver and Yash will be the Navigator for the initial phase of code development. In the phase 2 of the process the driver and navigator roles will be swapped. The role of process manager will be observed by the person  in the role of navigator. Iteration meetings will be conducted and parallel code changes will be made. The product backlog will be created and it will be iterated as the project progresses. This will also ensure the quality of the project.
-https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing
+AIP Google Sheet - https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing
+Sprint Planning - 
 
 ## Standard install via command-line
 ```
@@ -97,6 +98,26 @@ cd ~/workspace
 mkdir -p boilerplate-eclipse
 cd boilerplate-eclipse
 cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../Manipulator_arm_path_planner/
+```
+
+## Making Doxygen documentation
+
+This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+How to Generate Doxygen Documentation
+
+To install doxygen run the following command:
+```
+sudo apt-get install doxygen
+
+Now from the cloned directory run:
+
+doxygen doxygen
+```
+Generated doxygen files are in html format and you can find them in ./docs folder. With the following command
+```
+cd docs
+cd html
+google-chrome index.html
 ```
 
 ## Import
