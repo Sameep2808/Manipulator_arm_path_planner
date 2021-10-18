@@ -1,6 +1,19 @@
+/**
+ * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
+**/
+
+
+/**
+ * @file: ik.h
+ * @brief: Contains the class definition of IK solver
+ * @author: Part 1 : Sameep Pote (driver), Yash Kulkarni (navigator)
+ **/
+
 #ifndef _INCLUDE_IK_H
 #define _INCLUDE_IK_H
 
+/// @class Ik_solver
+/// @brief The class used to compute the inverse kinematics of robotic arm
 class Ik_solver {
 
  private:
@@ -11,10 +24,22 @@ class Ik_solver {
 
   double x_final, y_final, z_final;
   double angle[4];
+
+  /// @fn void input_end_point(double, double, double)
+  /// @brief function used to take input endpoint from the user
+  /// @param x
+  /// @param y
+  /// @param z
   void input_end_point(double x, double y, double z);
 
+  /// @fn void ik_solve(double)
+  /// @brief function used to compute inverse kinematics for robotic arm
+  /// @param phi
   void ik_solve(double phi);
 
+  /// @fn void set_initial()
+  /// @brief function used to set initial constraints for robotic arm
+  ///
   void set_initial();
 
 };
