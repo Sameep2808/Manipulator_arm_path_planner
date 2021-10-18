@@ -1,5 +1,4 @@
 #include <iostream>
-#include <lib.hpp>
 #include "ik.h"
 #include <cmath>
 
