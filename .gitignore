@@ -6,7 +6,6 @@
 
 # Build artifacts
 build/
-/app/main.cpp
 
 # Python
 *.pyc
