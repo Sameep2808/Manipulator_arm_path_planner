@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=iteration_development_branch_1)](https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1)
+
 ## Overview
 Our objective is to create a IK solver and a path planning software for a 5DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.
 
