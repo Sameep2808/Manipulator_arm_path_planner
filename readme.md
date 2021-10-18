@@ -32,26 +32,26 @@ SOFTWARE.
 ## Overview
 Our objective is to create a IK solver and a path planning software for a 4DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.
 
-# Objective
+### Objective
 Our project focuses on the software for optimal implementation of robotic arm, with 4DOF robotic arm equipped with an IK solver and custom designed path planner to simulate its actions and movement in capabilities similar to a human arm for a pick and place application. This software will be developed keeping in mind the inverse  kinematics and the path planning, taking into account the obstacles and complexities faced by robotic arm with any dimensions. 
 
-# Approach
+### Approach
 Inverse Kinematic Solver: Inverse kinematics uses kinematics equation to get the joint parameters which then can be used to calculate the desired position and rotation of our robotic arm end-effectors. We use this method as it is much faster compared to the forward kinematics. There are three methods to solve inverse kinematics:
 	Algebraic: Basically solving using matrices
 	Geometric:Using robotic arm’s geometry with trigonometric equations
 	Numeric:Take random movements and look how close we are to the target then move one or 			more segments to locally minimize the error. Repeat the same process till you 			reach the final point
 In this project we will be using the geometric method as it is comparatively less complex and efficient.
 
-# Importance
+### Importance
 Industry creates a lot of jobs which are repetitive, mundane and tedious. A human can work efficiently for 8 hours and more if trained properly but  still lacks efficiency when compared to a robot. Industry has realised this and is replacing humans with robotic arms for  these highly mundane jobs to increase productivity. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. In each of these cases selection of the right robotic arm with the right inverse kinematics and path planning algorithm should be used. The software designed by us is a dynamic IK solver and path planner for a 5 DOF robotic arm with variable arm length as per the users requirements.
 
-# Technologies Used
+### Technologies Used
 Programming language : C++.
 Build system : Ubuntu 18.04, 20.04 .
 Softwares used : Eclipse, OpenGL.
 Libraries: Math library, Standard C++ Libraries.
 
-# Risk and Mitigation
+### Risk and Mitigation
 Mechanical failures may result in unexpected behaviour of the arm and such failures can cause potential damage to the system. To avoid this regular maintenance of the robot should be performed. Human errors can cause a wide range of mistakes like faulty interfacing or incorrect activation of software. To avoid these we can use exceptions while programming so that such mistakes are ignored and rectified and the program doesn't crash while running.
 
 ## Development Process
