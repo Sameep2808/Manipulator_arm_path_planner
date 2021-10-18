@@ -1,6 +1,6 @@
 /**
  * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
-**/
+ **/
 
 /**
  * @file: ik.cpp
@@ -11,7 +11,6 @@
 #include <ik.h>
 #include <iostream>
 #include <cmath>
-
 
 void Ik_solver::input_end_point(double x, double y, double z) {
   x_final = x;
@@ -47,4 +46,7 @@ void Ik_solver::set_initial() {
   length[1] = 3;
   length[2] = 2;
   input_end_point(x_initial, y_initial, z_initial);
+}
+
+void Ik_solver::limit_movement() {
 }

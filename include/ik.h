@@ -1,7 +1,6 @@
 /**
  * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
-**/
-
+ **/
 
 /**
  * @file: ik.h
@@ -39,5 +38,10 @@ class Ik_solver {
   /// @brief function used to set initial constraints for robotic arm
   ///
   void set_initial();
+
+  /// @fn void limit_movement()
+  /// @brief Function used so that the robot does not collide with itself
+  ///
+  void limit_movement();  // Will Implement in next phase
 };
 #endif  // INCLUDE_IK_H_
