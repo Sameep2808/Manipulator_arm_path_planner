@@ -1,0 +1,82 @@
+\href{https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner}{\texttt{ }} \href{https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1}{\texttt{ }} \href{https://opensource.org/licenses/MIT}{\texttt{ }}\hypertarget{md_readme_autotoc_md0}{}\doxysubsection{Overview}\label{md_readme_autotoc_md0}
+Our objective is to create a IK solver and a path planning software for a 5D\+OF robotic arm. Today at every scale of manufacturing from minutely detailed V\+L\+SI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.\hypertarget{md_readme_autotoc_md1}{}\doxysubsection{Agile Iterative Process}\label{md_readme_autotoc_md1}
+\href{https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/spreadsheets/d/1\+P\+Y\+U4\+Kbmb\+Upj8\+Jzw\+Zs5e4\+I8\+T3\+Ugeq\+I\+C\+Prl9gq\+Wq-\/t9\+L\+E/edit?usp=sharing}}\hypertarget{md_readme_autotoc_md2}{}\doxysubsection{Standard install via command-\/line}\label{md_readme_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone -\/-\/recursive https://github.com/Sameep2808/Manipulator\_arm\_path\_planner}
+\DoxyCodeLine{cd <path to repository>}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+\DoxyCodeLine{Run tests: ./test/cpp-\/test}
+\DoxyCodeLine{Run program: ./app/shell-\/app}
+\end{DoxyCode}
+\hypertarget{md_readme_autotoc_md3}{}\doxysubsection{Building for code coverage (for assignments beginning in Week 4)}\label{md_readme_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get install lcov}
+\DoxyCodeLine{cmake -\/D COVERAGE=ON -\/D CMAKE\_BUILD\_TYPE=Debug ../}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make code\_coverage}
+\end{DoxyCode}
+
+
+This generates a index.\+html page in the build/coverage sub-\/directory that can be viewed locally in a web browser.\hypertarget{md_readme_autotoc_md4}{}\doxysubsection{Working with Eclipse I\+DE}\label{md_readme_autotoc_md4}
+\hypertarget{md_readme_autotoc_md5}{}\doxysubsection{Installation}\label{md_readme_autotoc_md5}
+In your Eclipse workspace directory (or create a new one), checkout the repo (and submodules) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -\/p \string~/workspace}
+\DoxyCodeLine{cd \string~/workspace}
+\DoxyCodeLine{git clone -\/-\/recursive https://github.com/dpiet/Manipulator\_arm\_path\_planner}
+\end{DoxyCode}
+
+
+In your work directory, use cmake to create an Eclipse project for an \mbox{[}out-\/of-\/source build\mbox{]} of cpp-\/boilerplate
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/workspace}
+\DoxyCodeLine{mkdir -\/p boilerplate-\/eclipse}
+\DoxyCodeLine{cd boilerplate-\/eclipse}
+\DoxyCodeLine{cmake -\/G "Eclipse CDT4 -\/ Unix Makefiles" -\/D CMAKE\_BUILD\_TYPE=Debug -\/D CMAKE\_ECLIPSE\_VERSION=4.7.0 -\/D CMAKE\_CXX\_COMPILER\_ARG1=-\/std=c++14 ../Manipulator\_arm\_path\_planner/}
+\end{DoxyCode}
+\hypertarget{md_readme_autotoc_md6}{}\doxysubsection{Import}\label{md_readme_autotoc_md6}
+Open Eclipse, go to File -\/$>$ Import -\/$>$ General -\/$>$ Existing Projects into Workspace -\/$>$ Select \char`\"{}boilerplate-\/eclipse\char`\"{} directory created previously as root directory -\/$>$ Finish\hypertarget{md_readme_autotoc_md7}{}\doxysection{Edit}\label{md_readme_autotoc_md7}
+Source files may be edited under the \char`\"{}\mbox{[}\+Source Directory\mbox{]}\char`\"{} label in the Project Explorer.\hypertarget{md_readme_autotoc_md8}{}\doxysubsection{Build}\label{md_readme_autotoc_md8}
+To build the project, in Eclipse, unfold boilerplate-\/eclipse project in Project Explorer, unfold Build Targets, double click on \char`\"{}all\char`\"{} to build all projects.\hypertarget{md_readme_autotoc_md9}{}\doxysubsection{Run}\label{md_readme_autotoc_md9}
+
+\begin{DoxyEnumerate}
+\item In Eclipse, right click on the boilerplate-\/eclipse in Project Explorer, select Run As -\/$>$ Local C/\+C++ Application
+\item Choose the binaries to run (e.\+g. shell-\/app, cpp-\/test for unit testing)
+\end{DoxyEnumerate}\hypertarget{md_readme_autotoc_md10}{}\doxysubsection{Debug}\label{md_readme_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item Set breakpoint in source file (i.\+e. double click in the left margin on the line you want the program to break).
+\item In Eclipse, right click on the boilerplate-\/eclipse in Project Explorer, select Debug As -\/$>$ Local C/\+C++ Application, choose the binaries to run (e.\+g. shell-\/app).
+\item If prompt to \char`\"{}\+Confirm Perspective Switch\char`\"{}, select yes.
+\item Program will break at the breakpoint you set.
+\item Press Step Into (F5), Step Over (F6), Step Return (F7) to step/debug your program.
+\item Right click on the variable in editor to add watch expression to watch the variable in debugger window.
+\item Press Terminate icon to terminate debugging and press C/\+C++ icon to switch back to C/\+C++ perspetive view (or Windows-\/$>$Perspective-\/$>$Open Perspective-\/$>$C/\+C++).
+\end{DoxyEnumerate}\hypertarget{md_readme_autotoc_md11}{}\doxysubsection{Plugins}\label{md_readme_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Cpp\+Ch\+Eclipse
+
+To install and run cppcheck in Eclipse
+\begin{DoxyEnumerate}
+\item In Eclipse, go to Window -\/$>$ Preferences -\/$>$ C/\+C++ -\/$>$ cppcheclipse. Set cppcheck binary path to \char`\"{}/usr/bin/cppcheck\char`\"{}.
+\item To run C\+P\+P\+Check on a project, right click on the project name in the Project Explorer and choose cppcheck -\/$>$ Run cppcheck.
+\end{DoxyEnumerate}
+\item Google C++ Sytle
+
+To include and use Google C++ Style formatter in Eclipse
+\begin{DoxyEnumerate}
+\item In Eclipse, go to Window -\/$>$ Preferences -\/$>$ C/\+C++ -\/$>$ Code Style -\/$>$ Formatter. Import \href{https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-cpp-google-style.xml}{\texttt{ eclipse-\/cpp-\/google-\/style}} and apply.
+\item To use Google C++ style formatter, right click on the source code or folder in Project Explorer and choose Source -\/$>$ Format
+\end{DoxyEnumerate}
+\item Git
+
+It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you\textquotesingle{}re interested in this, try it out yourself and contact me on Canvas. 
+\end{DoxyItemize}
