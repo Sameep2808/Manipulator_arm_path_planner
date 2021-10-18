@@ -29,10 +29,12 @@ void Ik_solver::ik_solve(double phi) {
 }
 
 void Ik_solver::set_initial() {
-  std::cout << "Enter the length of 3 links" << std::endl;
-  std::cin >> length[0];
-  std::cin >> length[1];
-  std::cin >> length[2];
+  //std::cout << "Enter the length of 3 links" << std::endl;
+  //std::cin >> length[0];
+  //std::cin >> length[1];
+  //std::cin >> length[2];
+  length[0]=5;
+  length[1]=3;
+  length[2]=2;
   input_end_point(x_initial,y_initial,z_initial);
-  ik_solve(90);
 }
