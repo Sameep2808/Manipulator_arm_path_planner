@@ -15,7 +15,7 @@ class Ik_solver {
 
   void input_end_point(double x, double y, double z);
 
-  void ik_solve();
+  void ik_solve(double phi);
 
   void set_initial();
 

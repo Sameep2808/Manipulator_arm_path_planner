@@ -8,12 +8,12 @@ void Ik_solver::input_end_point(double x, double y, double z) {
   z_final = z;
 }
 
-void Ik_solver::ik_solve() {
+void Ik_solver::ik_solve(double phi) {
 
   double rad = M_PI / 180;
   angle[0] = atan(z_final / x_final) / rad;
-  double x2 = x_final - (length[2] * cos(rad * 45));
-  double y2 = y_final - (length[2] * sin(rad * 45));
+  double x2 = x_final - (length[2] * cos(rad * phi));
+  double y2 = y_final - (length[2] * sin(rad * phi));
   angle[2] =
       acos(
           ((x2 * x2) + (y2 * y2) - (length[0] * length[0])
@@ -33,5 +33,6 @@ void Ik_solver::set_initial() {
   std::cin >> length[0];
   std::cin >> length[1];
   std::cin >> length[2];
-  //input_end_point(x_initial,y_initial,z_initial);
+  input_end_point(x_initial,y_initial,z_initial);
+  ik_solve(45);
 }
