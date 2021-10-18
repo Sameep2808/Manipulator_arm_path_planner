@@ -8,19 +8,6 @@ void Ik_solver::input_end_point(double x, double y, double z) {
   z_final = z;
 }
 
-void Ik_solver::get_points(){
-  double x, y, z,phi;
-  set_initial();
-  std::cout << "Enter the final position and end effector angle" << std::endl;
-  std::cin >> x;
-  std::cin >> y;
-  std::cin >> z;
-  std::cin >> phi;
-  input_end_point(x, y, z);
-  ik_solve(phi);
-
-}
-
 void Ik_solver::ik_solve(double phi) {
 
   double rad = M_PI / 180;
@@ -50,4 +37,5 @@ void Ik_solver::set_initial() {
   length[1]=3;
   length[2]=2;
   input_end_point(x_initial,y_initial,z_initial);
+
 }

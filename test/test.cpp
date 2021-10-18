@@ -3,10 +3,6 @@
 
 Ik_solver r;
 
-TEST(get_points, should_pass) {
-  EXPECT_EQ(1, 1);
-}
-
 TEST(set_endpoint_0, should_pass) {
 r.input_end_point(0,0,0);
 ASSERT_DOUBLE_EQ(r.x_final,0);
