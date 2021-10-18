@@ -31,3 +31,11 @@ ASSERT_DOUBLE_EQ(r.y_final,3);
 ASSERT_DOUBLE_EQ(r.z_final,0);
 }
 
+TEST(ik_solve_check, should_pass) {
+r.input_end_point(8,2,8);
+r.ik_solve(45);
+ASSERT_DOUBLE_EQ(r.angle[0],45);
+ASSERT_DOUBLE_EQ(r.angle[1],20.339051610130117);
+ASSERT_DOUBLE_EQ(r.angle[2],1.2409922980326833);
+ASSERT_DOUBLE_EQ(r.angle[3],68.419956091837207);
+}
