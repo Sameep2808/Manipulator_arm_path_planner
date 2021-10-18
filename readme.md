@@ -56,7 +56,9 @@ Mechanical failures may result in unexpected behaviour of the arm and such failu
 
 ## Development Process
 The design and development process will be followed by the AIP (Agile Iterative process) model. Here programmers Yash and Sameep will write the initial code using TDD (Test driven development) format where Sameep will be the driver and Yash will be the Navigator for the initial phase of code development. In the phase 2 of the process the driver and navigator roles will be swapped. The role of process manager will be observed by the person  in the role of navigator. Iteration meetings will be conducted and parallel code changes will be made. The product backlog will be created and it will be iterated as the project progresses. This will also ensure the quality of the project.
+
 AIP Google Sheet - https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing
+
 Sprint Planning - https://docs.google.com/document/d/1VrPSeDZMrlXiKwYYkjeqAZw1AoysRd-4HR6hTaqB23k/edit?usp=sharing
 
 ## Standard install via command-line
