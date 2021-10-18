@@ -6,7 +6,7 @@ class Ik_solver {
  private:
   double length[3] = { 1, 1, 1 };
   double angle[4];
-  double x_initial = 1, y_initial = 1, z_initial = 1;
+  double x_initial = 5, y_initial = 3, z_initial = 0;
 
  public:
 

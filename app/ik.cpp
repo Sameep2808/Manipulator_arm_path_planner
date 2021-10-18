@@ -34,5 +34,5 @@ void Ik_solver::set_initial() {
   std::cin >> length[1];
   std::cin >> length[2];
   input_end_point(x_initial,y_initial,z_initial);
-  ik_solve(45);
+  ik_solve(90);
 }

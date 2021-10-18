@@ -8,7 +8,6 @@ int main() {
   Ik_solver rob;
 
   double x, y, z,phi;
-
   rob.set_initial();
   std::cout << "Enter the final position and end effector angle" << std::endl;
   std::cin >> x;
