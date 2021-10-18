@@ -9,19 +9,17 @@
  * @author: Part 1 : Sameep Pote (driver), Yash Kulkarni (navigator)
  **/
 
-#ifndef _INCLUDE_IK_H
-#define _INCLUDE_IK_H
+#ifndef INCLUDE_IK_H_
+#define INCLUDE_IK_H_
 
 /// @class Ik_solver
 /// @brief The class used to compute the inverse kinematics of robotic arm
 class Ik_solver {
-
  private:
   double length[3] = { 1, 1, 1 };
   double x_initial = 5, y_initial = 3, z_initial = 0;
 
  public:
-
   double x_final, y_final, z_final;
   double angle[4];
 
@@ -41,8 +39,5 @@ class Ik_solver {
   /// @brief function used to set initial constraints for robotic arm
   ///
   void set_initial();
-
 };
-
-#endif
-
+#endif  // INCLUDE_IK_H_

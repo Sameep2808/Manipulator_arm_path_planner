@@ -1,0 +1,5 @@
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/midterm/app/ik.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/midterm/app/main.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/midterm/include/ik.h
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/midterm/test/main.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/midterm/test/test.cpp

@@ -1,3 +1,7 @@
+/**
+ * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
+**/
+
 #include <gtest/gtest.h>
 
 int main(int argc, char **argv) {

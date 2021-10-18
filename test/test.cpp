@@ -2,7 +2,7 @@
  * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
 **/
 #include <gtest/gtest.h>
-#include "ik.h"
+#include <ik.h>
 
 Ik_solver r;
 
