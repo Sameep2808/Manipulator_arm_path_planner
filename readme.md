@@ -1,6 +1,4 @@
-[![Build Status](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner.svg?branch=main)](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner)
-
-[![Coverage Status](https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=iteration_development_branch_1)](https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1)
+[![Build Status](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner.svg?branch=main)](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner) [![Coverage Status](https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=iteration_development_branch_1)](https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1)
 
 
 ## Overview
