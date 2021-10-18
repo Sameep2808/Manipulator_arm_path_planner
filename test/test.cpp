@@ -1,6 +1,11 @@
-/**
- * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
-**/
+///============================================================================
+/// @file        : test.cpp
+/// @author      : Sameep Pote (Driver)
+/// @author      : Yash Kulkarni (Navigator)
+/// @version     : 1.0
+/// @copyright   : MIT License
+/// @brief       : test.cpp This file is used for unit testing all the fuctions
+///============================================================================
 #include <gtest/gtest.h>
 #include <ik.h>
 

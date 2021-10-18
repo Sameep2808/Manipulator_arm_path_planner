@@ -1,6 +1,11 @@
-/**
- * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
-**/
+///============================================================================
+/// @file        : main.cpp
+/// @author      : Sameep Pote (Driver)
+/// @author      : Yash Kulkarni (Navigator)
+/// @version     : 1.0
+/// @copyright   : MIT License
+/// @brief       : main.cpp Main function to run the program
+///============================================================================
 
 #include <ik.h>
 #include <iostream>
@@ -10,7 +15,7 @@
 /// @return 0
 int main() {
   /*Ik_solver rob;
-
+   Currently commented for coveralls
    double x, y, z,phi;
    rob.set_initial();
    std::cout << "Enter the final position and end effector angle" << std::endl;

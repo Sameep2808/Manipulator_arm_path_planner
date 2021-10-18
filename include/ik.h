@@ -1,12 +1,11 @@
-/**
- * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
- **/
-
-/**
- * @file: ik.h
- * @brief: Contains the class definition of IK solver
- * @author: Part 1 : Sameep Pote (driver), Yash Kulkarni (navigator)
- **/
+///============================================================================
+/// @file        : ik.cpp
+/// @author      : Sameep Pote (Driver)
+/// @author      : Yash Kulkarni (Navigator)
+/// @version     : 1.0
+/// @copyright   : MIT License
+/// @brief       : ik.h This file is used to define all ther ik solver codes
+///============================================================================
 
 #ifndef INCLUDE_IK_H_
 #define INCLUDE_IK_H_

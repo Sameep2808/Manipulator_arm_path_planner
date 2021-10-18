@@ -1,6 +1,11 @@
-/**
- * Copyright 2021 <Sameep Pote> <Yash Kulkarni>
-**/
+///============================================================================
+/// @file        : ik.cpp
+/// @author      : Sameep Pote (Driver)
+/// @author      : Yash Kulkarni (Navigator)
+/// @version     : 1.0
+/// @copyright   : MIT License
+/// @brief       : main.cpp 
+///============================================================================
 
 #include <gtest/gtest.h>
 
