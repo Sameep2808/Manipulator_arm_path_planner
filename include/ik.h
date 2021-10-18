@@ -17,6 +17,8 @@ class Ik_solver {
 
   void set_initial();
 
+  void get_points();
+
 };
 
 #endif

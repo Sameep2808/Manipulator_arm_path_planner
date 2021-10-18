@@ -3,6 +3,10 @@
 
 Ik_solver r;
 
+TEST(input_end_point, should_pass) {
+  r.get_points();
+  EXPECT_EQ(1, 1);
+}
 
 TEST(set_endpoint_0, should_pass) {
 r.input_end_point(0,0,0);
