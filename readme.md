@@ -6,11 +6,11 @@
 ## Overview
 Our objective is to create a IK solver and a path planning software for a 5DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.
 
-##Personnel
+## Personnel
 - Sameep Pote - M.Eng. Robotics Student at University of Maryland College Park. 
 - Yash Kulkarni - M.Eng. Robotics Student at University of Maryland College Park. 
 
-##License
+## License
 MIT License
 
 Copyright (c) 2021 Sameep Pote, Yash Kulkarni
