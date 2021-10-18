@@ -25,9 +25,9 @@ ASSERT_DOUBLE_EQ(r.z_final,-10);
 }
 
 TEST(set_initial, should_pass) {
-r.input_end_point(-10,-10,-10);
-ASSERT_DOUBLE_EQ(r.x_final,-10);
-ASSERT_DOUBLE_EQ(r.y_final,-10);
-ASSERT_DOUBLE_EQ(r.z_final,-10);
+r.set_initial();
+ASSERT_DOUBLE_EQ(r.x_final,5);
+ASSERT_DOUBLE_EQ(r.y_final,3);
+ASSERT_DOUBLE_EQ(r.z_final,0);
 }
 
