@@ -19,7 +19,7 @@ class Ik_solver {
 
  public:
   double x_final, y_final, z_final;
-  double angle[4];
+  double angle[4]= { 0, 0, 0 ,0};;
 
   /// @fn void input_end_point(double, double, double)
   /// @brief function used to take input endpoint from the user
@@ -36,7 +36,7 @@ class Ik_solver {
   /// @fn void set_initial()
   /// @brief function used to set initial constraints for robotic arm
   ///
-  void set_initial();
+  void set_initial(double l1, double l2, double l3);
 
   /// @fn void limit_movement()
   /// @brief Function used so that the robot does not collide with itself
