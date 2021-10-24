@@ -163,4 +163,20 @@ void specialKeys(int key, int x, int y) {
   glutPostRedisplay();
 }
 
+/// @fn int main()
+/// @brief The main function is to run and execute all the functions
+/// @return 0
+int main(int argc, char *argv[]) {
+
+  glutInit(&argc, argv);
+  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+  glutInitWindowSize(1900, 1900);
+  glutCreateWindow("4DOF Robotic Arm");
+  glutDisplayFunc(display);
+  glutReshapeFunc(reshape);
+  glutSpecialFunc(specialKeys);
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glutMainLoop();
+  return 0;
+}
 
