@@ -133,5 +133,16 @@ void display(void) {
 
 }
 
+void reshape(GLsizei w, GLsizei h) {
+  glViewport(0, 0, w, h);
+
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+
+  glFrustum(-1.0, 1.0, -1.0, 1.0, 1.5, 300.0);
+
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+}
 
 
