@@ -29,22 +29,18 @@ void Ik_solver::ik_solve(double phi) {
   angle[1] = (acos(
       (((length[0] + length[1] * cos(angle[2])) * x2)
           + (length[1] * y2 * sin(angle[2]))) / ((x2 * x2) + (y2 * y2)))) / rad;
-  angle[3] = 90 - (angle[1] + angle[2]);
+  angle[3] = phi - (angle[1] + angle[2]);
   std::cout << angle[0] << std::endl;
   std::cout << angle[1] << std::endl;
   std::cout << angle[2] << std::endl;
   std::cout << angle[3] << std::endl;
 }
 
-void Ik_solver::set_initial() {
-  // std::cout << "Enter the length of 3 links" << std::endl;
-  // std::cin >> length[0];
-  // std::cin >> length[1];
-  // std::cin >> length[2];
-  length[0] = 5;
-  length[1] = 3;
-  length[2] = 2;
-  input_end_point(x_initial, y_initial, z_initial);
+void Ik_solver::set_initial(double l1, double l2, double l3) {
+  length[0] = l1;
+  length[1] = l2;
+  length[2] = l3;
+  input_end_point(l1+l2+l3, 0, 0);
 }
 
 void Ik_solver::limit_movement() {
