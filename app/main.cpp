@@ -145,4 +145,22 @@ void reshape(GLsizei w, GLsizei h) {
   glLoadIdentity();
 }
 
+void specialKeys(int key, int x, int y) {
+  GLfloat distanceDelta = 1.0, angleDelta = 5 * M_PI / 180.0;
+  if (key == GLUT_KEY_UP) {
+    cameraDistance -= distanceDelta;
+    cameraDistance = max((GLfloat) 2.0, cameraDistance);
+  }
+  if (key == GLUT_KEY_DOWN) {
+    cameraDistance += distanceDelta;
+  }
+  if (key == GLUT_KEY_LEFT) {
+    cameraAngle -= angleDelta;
+  }
+  if (key == GLUT_KEY_RIGHT) {
+    cameraAngle += angleDelta;
+  }
+  glutPostRedisplay();
+}
+
 
