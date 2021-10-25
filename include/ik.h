@@ -40,6 +40,5 @@ class Ik_solver {
   /// @brief function used to set initial constraints for robotic arm
   ///
   void set_initial(double l1, double l2, double l3);
-
 };
 #endif  // INCLUDE_IK_H_
