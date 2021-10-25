@@ -167,29 +167,6 @@ void reshape(GLsizei w, GLsizei h) {
   glLoadIdentity();
 }
 
-/// @fn void specialKeys(int , int , int)
-/// @brief This function is used to adjust the camera as per requirement
-/// @param key
-/// @param x
-/// @param y
-void specialKeys(int key, int x, int y) {
-  GLfloat distanceDelta = 1.0, angleDelta = 5 * M_PI / 180.0;
-  if (key == GLUT_KEY_UP) {
-    cameraDistance -= distanceDelta;
-    cameraDistance = std::max((GLfloat) 2.0, cameraDistance);
-  }
-  if (key == GLUT_KEY_DOWN) {
-    cameraDistance += distanceDelta;
-  }
-  if (key == GLUT_KEY_LEFT) {
-    cameraAngle -= angleDelta;
-  }
-  if (key == GLUT_KEY_RIGHT) {
-    cameraAngle += angleDelta;
-  }
-  glutPostRedisplay();
-}
-
 /// @fn int main()
 /// @brief The main function is to run and execute all the functions
 /// @return 0
@@ -200,9 +177,7 @@ int main(int argc, char *argv[]) {
   glutCreateWindow("4DOF Robotic Arm");
   glutDisplayFunc(display);
   glutReshapeFunc(reshape);
-  glutSpecialFunc(specialKeys);
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   glutMainLoop();
   return 0;
 }
-
