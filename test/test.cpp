@@ -41,7 +41,7 @@ TEST(set_endpoint_neg, should_pass) {
 }
 
 TEST(set_initial, should_pass) {
-  r.set_initial(1,1,1);
+  r.set_initial(1, 1, 1);
   ASSERT_DOUBLE_EQ(r.x_final, 3);
   ASSERT_DOUBLE_EQ(r.y_final, 0);
   ASSERT_DOUBLE_EQ(r.z_final, 0);
