@@ -14,7 +14,7 @@
 #include <iostream>
 #include <cmath>
 
-///get the input for the endpoint
+/// get the input for the endpoint
 void Ik_solver::input_end_point(double x, double y, double z) {
   x_final = x;
   y_final = y;

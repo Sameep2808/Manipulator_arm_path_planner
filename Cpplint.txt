@@ -1,5 +1,3 @@
 Done processing /home/yash/ENPM808X/Midterm project/Manipulator_arm_path_planner/app/ik.cpp
 Done processing /home/yash/ENPM808X/Midterm project/Manipulator_arm_path_planner/app/main.cpp
 Done processing /home/yash/ENPM808X/Midterm project/Manipulator_arm_path_planner/include/ik.h
-Done processing /home/yash/ENPM808X/Midterm project/Manipulator_arm_path_planner/test/test.cpp
-Total errors found: 13

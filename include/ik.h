@@ -22,7 +22,7 @@ class Ik_solver {
 
  public:
   double x_final, y_final, z_final;
-  double angle[4]= { 0, 0, 0 ,0};;
+  double angle[4] = { 0, 0, 0, 0 };
 
   /// @fn void input_end_point(double, double, double)
   /// @brief function used to take input endpoint from the user
