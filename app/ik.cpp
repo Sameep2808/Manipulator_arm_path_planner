@@ -3,6 +3,9 @@
 /// @author      : Sameep Pote (Driver)
 /// @author      : Yash Kulkarni (Navigator)
 /// @version     : 1.0
+/// @author      : Yash Kulkarni (Driver)
+/// @author      : Sameep Pote (Navigator)
+/// @version     : 2.0
 /// @copyright   : MIT License
 /// @brief       : ik.cpp This file is used to write all ther ik solver codes
 ///============================================================================
@@ -11,12 +14,15 @@
 #include <iostream>
 #include <cmath>
 
+///get the input for the endpoint
 void Ik_solver::input_end_point(double x, double y, double z) {
   x_final = x;
   y_final = y;
   z_final = z;
 }
 
+
+/// calculate the values of the angles
 void Ik_solver::ik_solve(double phi) {
   double rad = M_PI / 180;
   angle[0] = atan(z_final / x_final) / rad;
@@ -36,6 +42,7 @@ void Ik_solver::ik_solve(double phi) {
   std::cout << angle[3] << std::endl;
 }
 
+/// set the lengths of links
 void Ik_solver::set_initial(double l1, double l2, double l3) {
   length[0] = l1;
   length[1] = l2;
@@ -43,5 +50,7 @@ void Ik_solver::set_initial(double l1, double l2, double l3) {
   input_end_point(l1+l2+l3, 0, 0);
 }
 
+
+/// limit the link movement
 void Ik_solver::limit_movement() {
 }
