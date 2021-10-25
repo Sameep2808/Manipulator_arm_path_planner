@@ -14,11 +14,6 @@
 
 Ik_solver r;
 
-TEST(dummy_test, should_pass) {
-  r.limit_movement();
-  EXPECT_EQ(1, 1);
-}
-
 TEST(set_endpoint_0, should_pass) {
   r.input_end_point(0, 0, 0);
   ASSERT_DOUBLE_EQ(r.x_final, 0);

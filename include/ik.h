@@ -41,9 +41,5 @@ class Ik_solver {
   ///
   void set_initial(double l1, double l2, double l3);
 
-  /// @fn void limit_movement()
-  /// @brief Function used so that the robot does not collide with itself
-  ///
-  void limit_movement();  // Will Implement in next phase
 };
 #endif  // INCLUDE_IK_H_

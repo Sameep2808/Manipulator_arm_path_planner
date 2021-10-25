@@ -45,7 +45,3 @@ void Ik_solver::set_initial(double l1, double l2, double l3) {
   length[2] = l3;
   input_end_point(l1 + l2 + l3, 0, 0);
 }
-
-void Ik_solver::limit_movement() {
-  double lim = length[0] + length[1] + length[2];
-}

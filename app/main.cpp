@@ -102,7 +102,8 @@ void display(void) {
   glPopMatrix();
 
   glutSwapBuffers();
-
+  std::cout << round(rob.angle[0]) << " " << arm_angles[SHOULDER_Y]
+            << std::endl;
   if ((arm_angles[SHOULDER_Y] == round(rob.angle[0]))
       && (arm_angles[SHOULDER_Z] == round(rob.angle[1]))
       && (arm_angles[ELBOW_Z] == round(rob.angle[2]))
@@ -118,33 +119,33 @@ void display(void) {
     if (arm_angles[SHOULDER_Y] != round(rob.angle[0])) {
       if (arm_angles[SHOULDER_Y] < round(rob.angle[0])) {
         arm_angles[SHOULDER_Y] += 1;
+      } else {
+        arm_angles[SHOULDER_Y] -= 1;
       }
-    } else {
-      arm_angles[SHOULDER_Y] -= 1;
     }
 
     if (arm_angles[SHOULDER_Z] != round(rob.angle[1])) {
       if (arm_angles[SHOULDER_Z] < round(rob.angle[1])) {
         arm_angles[SHOULDER_Z] += 1;
+      } else {
+        arm_angles[SHOULDER_Z] -= 1;
       }
-    } else {
-      arm_angles[SHOULDER_Z] -= 1;
     }
 
     if (arm_angles[ELBOW_Z] != round(rob.angle[2])) {
       if (arm_angles[ELBOW_Z] < round(rob.angle[2])) {
         arm_angles[ELBOW_Z] += 1;
+      } else {
+        arm_angles[ELBOW_Z] -= 1;
       }
-    } else {
-      arm_angles[ELBOW_Z] -= 1;
     }
 
     if (arm_angles[WRIST_Z] != round(rob.angle[3])) {
       if (arm_angles[WRIST_Z] < round(rob.angle[3])) {
         arm_angles[WRIST_Z] += 1;
+      } else {
+        arm_angles[WRIST_Z] -= 1;
       }
-    } else {
-      arm_angles[WRIST_Z] -= 1;
     }
     glutPostRedisplay();
   }
