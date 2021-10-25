@@ -102,8 +102,6 @@ void display(void) {
   glPopMatrix();
 
   glutSwapBuffers();
-  std::cout << round(rob.angle[0]) << " " << arm_angles[SHOULDER_Y]
-            << std::endl;
   if ((arm_angles[SHOULDER_Y] == round(rob.angle[0]))
       && (arm_angles[SHOULDER_Z] == round(rob.angle[1]))
       && (arm_angles[ELBOW_Z] == round(rob.angle[2]))

@@ -26,12 +26,17 @@ void Ik_solver::ik_solve(double phi) {
   double x2 = x_final - (length[2] * cos(rad * phi));
   double y2 = y_final - (length[2] * sin(rad * phi));
   angle[2] =
-      acos(
+      (acos(
           ((x2 * x2) + (y2 * y2) - (length[0] * length[0])
-              - (length[1] * length[1])) / (2 * length[1] * length[0]));
-  angle[1] = (acos(
-      (((length[0] + length[1] * cos(angle[2])) * x2)
-          + (length[1] * y2 * sin(angle[2]))) / ((x2 * x2) + (y2 * y2)))) / rad;
+              - (length[1] * length[1])) / (2 * length[1] * length[0]))) / rad;
+  /*angle[1] = (acos(
+   (((length[0] + (length[1] * cos(angle[2]))) * x2)
+   + (length[1] * y2 * sin(angle[2]))) / ((x2 * x2) + (y2 * y2)))) / rad;*/
+  double c1 = ((((length[0] + (length[1] * cos(angle[2]))) * x2)
+      + (length[1] * y2 * sin(angle[2]))) / ((x2 * x2) + (y2 * y2)));
+  double s1 = ((((length[0] + (length[1] * cos(angle[2]))) * y2)
+      + (length[1] * x2 * sin(angle[2]))) / ((x2 * x2) + (y2 * y2)));
+  angle[1] = atan(s1 / c1);
   angle[3] = phi - (angle[1] + angle[2]);
   std::cout << angle[0] << std::endl;
   std::cout << angle[1] << std::endl;
