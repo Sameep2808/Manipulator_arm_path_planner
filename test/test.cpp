@@ -46,7 +46,7 @@ TEST(set_initial, should_pass) {
 
 TEST(ik_solve_check, should_pass) {
   r.input_end_point(8, 2, 8);
-  r.ik_solve(45);
+  r.ik_solve(90);
   ASSERT_DOUBLE_EQ(r.angle[0], 45);
   ASSERT_DOUBLE_EQ(r.angle[1], 20.339051610130117);
   ASSERT_DOUBLE_EQ(r.angle[2], 1.2409922980326833);
