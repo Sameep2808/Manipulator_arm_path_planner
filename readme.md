@@ -1,5 +1,5 @@
 [![Build Status](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner.svg?branch=main)](https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner) 
-[![Coverage Status](https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=iteration_development_branch_1)](https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1)
+[![Coverage Status](https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=main)](https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Personnel
