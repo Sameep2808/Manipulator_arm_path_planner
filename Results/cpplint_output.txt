@@ -3,3 +3,8 @@ Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_p
 Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/include/ik.h
 Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/test/main.cpp
 Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/test/test.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/app/ik.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/app/main.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/include/ik.h
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/test/main.cpp
+Done processing /home/sameep/Desktop/EMPN808X/Midterm/it2/Manipulator_arm_path_planner/test/test.cpp
