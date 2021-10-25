@@ -3,6 +3,9 @@
 /// @author      : Sameep Pote (Driver)
 /// @author      : Yash Kulkarni (Navigator)
 /// @version     : 1.0
+/// @author      : Yash Kulkarni (Driver)
+/// @author      : Sameep Pote (Navigator)
+/// @version     : 2.0
 /// @copyright   : MIT License
 /// @brief       : ik.h This file is used to define all ther ik solver codes
 ///============================================================================

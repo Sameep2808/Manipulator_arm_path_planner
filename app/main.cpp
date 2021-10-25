@@ -3,6 +3,9 @@
 /// @author      : Sameep Pote (Driver)
 /// @author      : Yash Kulkarni (Navigator)
 /// @version     : 1.0
+/// @author      : Yash Kulkarni (Driver)
+/// @author      : Sameep Pote (Navigator)
+/// @version     : 2.0
 /// @copyright   : MIT License
 /// @brief       : main.cpp Main function to run the program
 ///============================================================================
@@ -16,6 +19,8 @@
 #include <cmath>
 
 using namespace std;
+
+/// Initialize the variables
 Ik_solver rob;
 GLfloat cameraDistance = 12, cameraAngle = 0;
 int c = 0;
@@ -29,12 +34,16 @@ enum {
   WRIST_Z
 };
 
+
+/// Calculate the change in the angle for the simulator
 void change_angle(int angle, int delta, int minimum = 0, int maximum = 180) {
   arm_angles[angle] = (arm_angles[angle] + delta) % 360;
   arm_angles[angle] = max(arm_angles[angle], minimum);
   arm_angles[angle] = min(arm_angles[angle], maximum);
 }
 
+
+/// Display the simulator
 void display(void) {
 
   double xr, yr, zr, phi, l1 = 5, l2 = 5, l3 = 5;
@@ -133,6 +142,7 @@ void display(void) {
 
 }
 
+/// Reshape
 void reshape(GLsizei w, GLsizei h) {
   glViewport(0, 0, w, h);
 
@@ -145,6 +155,8 @@ void reshape(GLsizei w, GLsizei h) {
   glLoadIdentity();
 }
 
+
+///add special keys
 void specialKeys(int key, int x, int y) {
   GLfloat distanceDelta = 1.0, angleDelta = 5 * M_PI / 180.0;
   if (key == GLUT_KEY_UP) {
