@@ -34,14 +34,12 @@ enum {
   WRIST_Z
 };
 
-
 /// Calculate the change in the angle for the simulator
 void change_angle(int angle, int delta, int minimum = 0, int maximum = 180) {
   arm_angles[angle] = (arm_angles[angle] + delta) % 360;
   arm_angles[angle] = max(arm_angles[angle], minimum);
   arm_angles[angle] = min(arm_angles[angle], maximum);
 }
-
 
 /// Display the simulator
 void display(void) {
@@ -120,21 +118,21 @@ void display(void) {
 
     if (arm_angles[SHOULDER_Z] != round(rob.angle[1]))
       if (arm_angles[SHOULDER_Z] < round(rob.angle[1]))
-              arm_angles[SHOULDER_Z] += 1;
-            else
-              arm_angles[SHOULDER_Z] -= 1;
+        arm_angles[SHOULDER_Z] += 1;
+      else
+        arm_angles[SHOULDER_Z] -= 1;
 
     if (arm_angles[ELBOW_Z] != round(rob.angle[2]))
       if (arm_angles[ELBOW_Z] < round(rob.angle[2]))
-              arm_angles[ELBOW_Z] += 1;
-            else
-              arm_angles[ELBOW_Z] -= 1;
+        arm_angles[ELBOW_Z] += 1;
+      else
+        arm_angles[ELBOW_Z] -= 1;
 
     if (arm_angles[WRIST_Z] != round(rob.angle[3]))
       if (arm_angles[WRIST_Z] < round(rob.angle[3]))
-              arm_angles[WRIST_Z] += 1;
-            else
-              arm_angles[WRIST_Z] -= 1;
+        arm_angles[WRIST_Z] += 1;
+      else
+        arm_angles[WRIST_Z] -= 1;
     glutPostRedisplay();
   }
 
@@ -154,7 +152,6 @@ void reshape(GLsizei w, GLsizei h) {
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
 }
-
 
 ///add special keys
 void specialKeys(int key, int x, int y) {

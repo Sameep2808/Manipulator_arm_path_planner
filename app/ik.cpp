@@ -21,7 +21,6 @@ void Ik_solver::input_end_point(double x, double y, double z) {
   z_final = z;
 }
 
-
 /// calculate the values of the angles
 void Ik_solver::ik_solve(double phi) {
   double rad = M_PI / 180;
@@ -47,9 +46,8 @@ void Ik_solver::set_initial(double l1, double l2, double l3) {
   length[0] = l1;
   length[1] = l2;
   length[2] = l3;
-  input_end_point(l1+l2+l3, 0, 0);
+  input_end_point(l1 + l2 + l3, 0, 0);
 }
-
 
 /// limit the link movement
 void Ik_solver::limit_movement() {
