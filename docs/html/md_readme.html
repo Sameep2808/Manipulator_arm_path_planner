@@ -65,14 +65,44 @@ $(function() {
 <div class="title">readme </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner"><object type="image/svg+xml" data="https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner.svg?branch=main" style="pointer-events: none;">Build Status</object></a> <a href="https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=iteration_development_branch_1"><object type="image/svg+xml" data="https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=iteration_development_branch_1" style="pointer-events: none;">Coverage Status</object></a> <a href="https://opensource.org/licenses/MIT"><object type="image/svg+xml" data="https://img.shields.io/badge/License-MIT-yellow.svg" style="pointer-events: none;">License: MIT</object></a></p>
+<div class="textblock"><p><a href="https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner"><object type="image/svg+xml" data="https://app.travis-ci.com/Sameep2808/Manipulator_arm_path_planner.svg?branch=main" style="pointer-events: none;">Build Status</object></a> <a href="https://coveralls.io/github/Sameep2808/Manipulator_arm_path_planner?branch=main"><object type="image/svg+xml" data="https://coveralls.io/repos/github/Sameep2808/Manipulator_arm_path_planner/badge.svg?branch=main" style="pointer-events: none;">Coverage Status</object></a> <a href="https://opensource.org/licenses/MIT"><object type="image/svg+xml" data="https://img.shields.io/badge/License-MIT-yellow.svg" style="pointer-events: none;">License: MIT</object></a></p>
 <h2><a class="anchor" id="autotoc_md0"></a>
-Overview</h2>
-<p>Our objective is to create a IK solver and a path planning software for a 5DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.</p>
+Personnel</h2>
+<ul>
+<li>Sameep Pote - M.Eng. Robotics Student at University of Maryland College Park.</li>
+<li>Yash Kulkarni - M.Eng. Robotics Student at University of Maryland College Park.</li>
+</ul>
 <h2><a class="anchor" id="autotoc_md1"></a>
-Agile Iterative Process</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing</a></p>
+License</h2>
+<p>MIT License</p>
+<p>Copyright (c) 2021 Sameep Pote, Yash Kulkarni</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <h2><a class="anchor" id="autotoc_md2"></a>
+Overview</h2>
+<p>Our objective is to create a IK solver and a path planning software for a 4DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.</p>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Objective</h3>
+<p>Our project focuses on the software for optimal implementation of robotic arm, with 4DOF robotic arm equipped with an IK solver and custom designed path planner to simulate its actions and movement in capabilities similar to a human arm for a pick and place application. This software will be developed keeping in mind the inverse kinematics and the path planning, taking into account the obstacles and complexities faced by robotic arm with any dimensions.</p>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Approach</h3>
+<p>Inverse Kinematic Solver: Inverse kinematics uses kinematics equation to get the joint parameters which then can be used to calculate the desired position and rotation of our robotic arm end-effectors. We use this method as it is much faster compared to the forward kinematics. There are three methods to solve inverse kinematics: Algebraic: Basically solving using matrices Geometric:Using robotic arm’s geometry with trigonometric equations Numeric:Take random movements and look how close we are to the target then move one or more segments to locally minimize the error. Repeat the same process till you reach the final point In this project we will be using the geometric method as it is comparatively less complex and efficient.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Importance</h3>
+<p>Industry creates a lot of jobs which are repetitive, mundane and tedious. A human can work efficiently for 8 hours and more if trained properly but still lacks efficiency when compared to a robot. Industry has realised this and is replacing humans with robotic arms for these highly mundane jobs to increase productivity. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. In each of these cases selection of the right robotic arm with the right inverse kinematics and path planning algorithm should be used. The software designed by us is a dynamic IK solver and path planner for a 5 DOF robotic arm with variable arm length as per the users requirements.</p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Technologies Used</h3>
+<p>Programming language : C++. Build system : Ubuntu 18.04, 20.04 . Softwares used : Eclipse, OpenGL. Libraries: Math library, Standard C++ Libraries.</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Risk and Mitigation</h3>
+<p>Mechanical failures may result in unexpected behaviour of the arm and such failures can cause potential damage to the system. To avoid this regular maintenance of the robot should be performed. Human errors can cause a wide range of mistakes like faulty interfacing or incorrect activation of software. To avoid these we can use exceptions while programming so that such mistakes are ignored and rectified and the program doesn't crash while running.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Development Process</h2>
+<p>The design and development process will be followed by the AIP (Agile Iterative process) model. Here programmers Yash and Sameep will write the initial code using TDD (Test driven development) format where Sameep will be the driver and Yash will be the Navigator for the initial phase of code development. In the phase 2 of the process the driver and navigator roles will be swapped. The role of process manager will be observed by the person in the role of navigator. Iteration meetings will be conducted and parallel code changes will be made. The product backlog will be created and it will be iterated as the project progresses. This will also ensure the quality of the project.</p>
+<p>AIP Google Sheet - <a href="https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1PYU4KbmbUpj8JzwZs5e4I8T3UgeqICPrl9gqWq-t9LE/edit?usp=sharing</a></p>
+<p>Sprint Planning - <a href="https://docs.google.com/document/d/1VrPSeDZMrlXiKwYYkjeqAZw1AoysRd-4HR6hTaqB23k/edit?usp=sharing">https://docs.google.com/document/d/1VrPSeDZMrlXiKwYYkjeqAZw1AoysRd-4HR6hTaqB23k/edit?usp=sharing</a></p>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Standard install via command-line</h2>
 <div class="fragment"><div class="line">git clone --recursive https://github.com/Sameep2808/Manipulator_arm_path_planner</div>
 <div class="line">cd &lt;path to repository&gt;</div>
@@ -82,16 +112,20 @@ Standard install via command-line</h2>
 <div class="line">make</div>
 <div class="line">Run tests: ./test/cpp-test</div>
 <div class="line">Run program: ./app/shell-app</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+Install OpenGl libraries</h2>
+<div class="fragment"><div class="line">sudo apt-get update</div>
+<div class="line">sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
 Building for code coverage (for assignments beginning in Week 4)</h2>
 <div class="fragment"><div class="line">sudo apt-get install lcov</div>
 <div class="line">cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../</div>
 <div class="line">make</div>
 <div class="line">make code_coverage</div>
 </div><!-- fragment --><p>This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Working with Eclipse IDE</h2>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Installation</h2>
 <p>In your Eclipse workspace directory (or create a new one), checkout the repo (and submodules) </p><div class="fragment"><div class="line">mkdir -p ~/workspace</div>
 <div class="line">cd ~/workspace</div>
@@ -101,22 +135,33 @@ Installation</h2>
 <div class="line">mkdir -p boilerplate-eclipse</div>
 <div class="line">cd boilerplate-eclipse</div>
 <div class="line">cmake -G &quot;Eclipse CDT4 - Unix Makefiles&quot; -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../Manipulator_arm_path_planner/</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+Making Doxygen documentation</h2>
+<p>This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser. How to Generate Doxygen Documentation</p>
+<p>To install doxygen run the following command: </p><div class="fragment"><div class="line">sudo apt-get install doxygen</div>
+<div class="line"> </div>
+<div class="line">Now from the cloned directory run:</div>
+<div class="line"> </div>
+<div class="line">doxygen doxygen</div>
+</div><!-- fragment --><p>Generated doxygen files are in html format and you can find them in ./docs folder. With the following command </p><div class="fragment"><div class="line">cd docs</div>
+<div class="line">cd html</div>
+<div class="line">google-chrome index.html</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
 Import</h2>
 <p>Open Eclipse, go to File -&gt; Import -&gt; General -&gt; Existing Projects into Workspace -&gt; Select "boilerplate-eclipse" directory created previously as root directory -&gt; Finish</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 Edit</h1>
 <p>Source files may be edited under the "[Source Directory]" label in the Project Explorer.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Build</h2>
 <p>To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer, unfold Build Targets, double click on "all" to build all projects.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 Run</h2>
 <ol type="1">
 <li>In Eclipse, right click on the boilerplate-eclipse in Project Explorer, select Run As -&gt; Local C/C++ Application</li>
 <li>Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Debug</h2>
 <ol type="1">
 <li>Set breakpoint in source file (i.e. double click in the left margin on the line you want the program to break).</li>
@@ -127,7 +172,7 @@ Debug</h2>
 <li>Right click on the variable in editor to add watch expression to watch the variable in debugger window.</li>
 <li>Press Terminate icon to terminate debugging and press C/C++ icon to switch back to C/C++ perspetive view (or Windows-&gt;Perspective-&gt;Open Perspective-&gt;C/C++).</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Plugins</h2>
 <ul>
 <li><p class="startli">CppChEclipse</p>
