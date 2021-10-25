@@ -32,6 +32,9 @@ SOFTWARE.
 ## Overview
 Our objective is to create a IK solver and a path planning software for a 4DOF robotic arm. Today at every scale of manufacturing from minutely detailed VLSI board assembly to heavy industry such as automobile production as well as in warehouses for pick and place application, robotic arms are being used. Similarly Acme robotics can use a robotic arm for various activities once they have a software which can navigate their arm to desired location efficiently.
 
+### Demo
+![](/Demo/Demo.gif)
+
 ### Objective
 Our project focuses on the software for optimal implementation of robotic arm, with 4DOF robotic arm equipped with an IK solver and custom designed path planner to simulate its actions and movement in capabilities similar to a human arm for a pick and place application. This software will be developed keeping in mind the inverse  kinematics and the path planning, taking into account the obstacles and complexities faced by robotic arm with any dimensions. 
 
