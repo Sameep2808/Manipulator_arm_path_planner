@@ -71,7 +71,7 @@ void display(void) {
   }
   rob.set_initial(l1, l2, l3);
   glPushMatrix();
-  glRotatef((GLfloat) arm_angles[SHOULDER_Y], 0., 1., 0.);
+  glRotatef((GLfloat) -arm_angles[SHOULDER_Y], 0., 1., 0.);
   glRotatef((GLfloat) arm_angles[SHOULDER_Z], 0., 0., 1.);
 
   glTranslatef(1., 0., 0.);
