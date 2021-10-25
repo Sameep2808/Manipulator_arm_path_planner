@@ -18,13 +18,14 @@
 #include <algorithm>
 #include <cmath>
 
-using namespace std;
+
 
 /// Initialize the variables
 Ik_solver rob;
 GLfloat cameraDistance = 12, cameraAngle = 0;
 int c = 0;
-// angles = { Y rotation at shoulder, Z rotation at shoulder, Z rotation at elbow, X rotation at wrist }
+/// angles = { Y rotation at shoulder, Z rotation at shoulder,
+///               Z rotation at elbow, X rotation at wrist }
 int arm_angles[5] = { 0, 0, 0, 0, 0 };
 enum {
   SHOULDER_Y,
@@ -37,13 +38,12 @@ enum {
 /// Calculate the change in the angle for the simulator
 void change_angle(int angle, int delta, int minimum = 0, int maximum = 180) {
   arm_angles[angle] = (arm_angles[angle] + delta) % 360;
-  arm_angles[angle] = max(arm_angles[angle], minimum);
-  arm_angles[angle] = min(arm_angles[angle], maximum);
+  arm_angles[angle] = std::max(arm_angles[angle], minimum);
+  arm_angles[angle] = std::min(arm_angles[angle], maximum);
 }
 
 /// Display the simulator
 void display(void) {
-
   double xr, yr, zr, phi, l1 = 5, l2 = 5, l3 = 5;
 
   glClear(GL_COLOR_BUFFER_BIT);
@@ -109,35 +109,34 @@ void display(void) {
     std::cin >> phi;
     rob.input_end_point(xr, yr, zr);
     rob.ik_solve(phi);
-  } else {
-    if (arm_angles[SHOULDER_Y] != round(rob.angle[0]))
-      if (arm_angles[SHOULDER_Y] < round(rob.angle[0]))
-        arm_angles[SHOULDER_Y] += 1;
-      else
-        arm_angles[SHOULDER_Y] -= 1;
+} else {
+    if (arm_angles[SHOULDER_Y] != round(rob.angle[0])) {
+      if (arm_angles[SHOULDER_Y] < round(rob.angle[0])) {
+        arm_angles[SHOULDER_Y] += 1; }
+    } else {
+        arm_angles[SHOULDER_Y] -= 1; }
 
-    if (arm_angles[SHOULDER_Z] != round(rob.angle[1]))
-      if (arm_angles[SHOULDER_Z] < round(rob.angle[1]))
-        arm_angles[SHOULDER_Z] += 1;
-      else
-        arm_angles[SHOULDER_Z] -= 1;
+    if (arm_angles[SHOULDER_Z] != round(rob.angle[1])) {
+      if (arm_angles[SHOULDER_Z] < round(rob.angle[1])) {
+        arm_angles[SHOULDER_Z] += 1; }
+    } else {
+        arm_angles[SHOULDER_Z] -= 1; }
 
-    if (arm_angles[ELBOW_Z] != round(rob.angle[2]))
-      if (arm_angles[ELBOW_Z] < round(rob.angle[2]))
-        arm_angles[ELBOW_Z] += 1;
-      else
-        arm_angles[ELBOW_Z] -= 1;
+    if (arm_angles[ELBOW_Z] != round(rob.angle[2])) {
+      if (arm_angles[ELBOW_Z] < round(rob.angle[2])) {
+        arm_angles[ELBOW_Z] += 1; }
+    }  else {
+        arm_angles[ELBOW_Z] -= 1; }
 
-    if (arm_angles[WRIST_Z] != round(rob.angle[3]))
-      if (arm_angles[WRIST_Z] < round(rob.angle[3]))
-        arm_angles[WRIST_Z] += 1;
-      else
-        arm_angles[WRIST_Z] -= 1;
+    if (arm_angles[WRIST_Z] != round(rob.angle[3])) {
+      if (arm_angles[WRIST_Z] < round(rob.angle[3])) {
+        arm_angles[WRIST_Z] += 1; }
+    }  else {
+        arm_angles[WRIST_Z] -= 1; }
     glutPostRedisplay();
   }
 
   glutPostRedisplay();
-
 }
 
 /// Reshape
@@ -153,7 +152,7 @@ void reshape(GLsizei w, GLsizei h) {
   glLoadIdentity();
 }
 
-///add special keys
+/// add special keys
 void specialKeys(int key, int x, int y) {
   GLfloat distanceDelta = 1.0, angleDelta = 5 * M_PI / 180.0;
   if (key == GLUT_KEY_UP) {
@@ -176,7 +175,6 @@ void specialKeys(int key, int x, int y) {
 /// @brief The main function is to run and execute all the functions
 /// @return 0
 int main(int argc, char *argv[]) {
-
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
   glutInitWindowSize(1900, 1900);
