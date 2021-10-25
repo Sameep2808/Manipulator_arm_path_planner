@@ -72,6 +72,11 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+## Install OpenGl libraries
+```
+sudo apt-get update
+sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+```
 
 ## Building for code coverage (for assignments beginning in Week 4)
 ```
