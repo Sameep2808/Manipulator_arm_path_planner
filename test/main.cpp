@@ -7,7 +7,7 @@
 /// @author      : Sameep Pote (Navigator)
 /// @version     : 2.0
 /// @copyright   : MIT License
-/// @brief       : main.cpp 
+/// @brief       : main.cpp
 ///============================================================================
 
 #include <gtest/gtest.h>

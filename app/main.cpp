@@ -18,8 +18,6 @@
 #include <algorithm>
 #include <cmath>
 
-
-
 /// Initialize the variables
 Ik_solver rob;
 GLfloat cameraDistance = 12, cameraAngle = 0;
@@ -35,14 +33,21 @@ enum {
   WRIST_Z
 };
 
-/// Calculate the change in the angle for the simulator
+/// @fn void change_angle(int, int, int, int)
+/// @brief Setting new angles of the arm
+/// @param angle
+/// @param delta
+/// @param minimum
+/// @param maximum
 void change_angle(int angle, int delta, int minimum = 0, int maximum = 180) {
   arm_angles[angle] = (arm_angles[angle] + delta) % 360;
   arm_angles[angle] = std::max(arm_angles[angle], minimum);
   arm_angles[angle] = std::min(arm_angles[angle], maximum);
 }
 
-/// Display the simulator
+/// @fn void display(void)
+/// @brief Creating the arm in the simulator and giving it angles according
+///        to the ik_solver
 void display(void) {
   double xr, yr, zr, phi, l1 = 5, l2 = 5, l3 = 5;
 
@@ -97,7 +102,6 @@ void display(void) {
   glPopMatrix();
 
   glutSwapBuffers();
-
   if ((arm_angles[SHOULDER_Y] == round(rob.angle[0]))
       && (arm_angles[SHOULDER_Z] == round(rob.angle[1]))
       && (arm_angles[ELBOW_Z] == round(rob.angle[2]))
@@ -109,37 +113,48 @@ void display(void) {
     std::cin >> phi;
     rob.input_end_point(xr, yr, zr);
     rob.ik_solve(phi);
-} else {
+  } else {
     if (arm_angles[SHOULDER_Y] != round(rob.angle[0])) {
       if (arm_angles[SHOULDER_Y] < round(rob.angle[0])) {
-        arm_angles[SHOULDER_Y] += 1; }
-    } else {
-        arm_angles[SHOULDER_Y] -= 1; }
+        arm_angles[SHOULDER_Y] += 1;
+      } else {
+        arm_angles[SHOULDER_Y] -= 1;
+      }
+    }
 
     if (arm_angles[SHOULDER_Z] != round(rob.angle[1])) {
       if (arm_angles[SHOULDER_Z] < round(rob.angle[1])) {
-        arm_angles[SHOULDER_Z] += 1; }
-    } else {
-        arm_angles[SHOULDER_Z] -= 1; }
+        arm_angles[SHOULDER_Z] += 1;
+      } else {
+        arm_angles[SHOULDER_Z] -= 1;
+      }
+    }
 
     if (arm_angles[ELBOW_Z] != round(rob.angle[2])) {
       if (arm_angles[ELBOW_Z] < round(rob.angle[2])) {
-        arm_angles[ELBOW_Z] += 1; }
-    }  else {
-        arm_angles[ELBOW_Z] -= 1; }
+        arm_angles[ELBOW_Z] += 1;
+      } else {
+        arm_angles[ELBOW_Z] -= 1;
+      }
+    }
 
     if (arm_angles[WRIST_Z] != round(rob.angle[3])) {
       if (arm_angles[WRIST_Z] < round(rob.angle[3])) {
-        arm_angles[WRIST_Z] += 1; }
-    }  else {
-        arm_angles[WRIST_Z] -= 1; }
+        arm_angles[WRIST_Z] += 1;
+      } else {
+        arm_angles[WRIST_Z] -= 1;
+      }
+    }
     glutPostRedisplay();
   }
 
   glutPostRedisplay();
 }
 
-/// Reshape
+/// @fn void specialKeys(GLsizei , Glsizei)
+/// @brief This function is used to adjust the camera as per requirement
+/// @param w
+/// @param h
 void reshape(GLsizei w, GLsizei h) {
   glViewport(0, 0, w, h);
 
@@ -152,7 +167,11 @@ void reshape(GLsizei w, GLsizei h) {
   glLoadIdentity();
 }
 
-/// add special keys
+/// @fn void specialKeys(int , int , int)
+/// @brief This function is used to adjust the camera as per requirement
+/// @param key
+/// @param x
+/// @param y
 void specialKeys(int key, int x, int y) {
   GLfloat distanceDelta = 1.0, angleDelta = 5 * M_PI / 180.0;
   if (key == GLUT_KEY_UP) {
